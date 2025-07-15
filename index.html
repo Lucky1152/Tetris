@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Tetris</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-grid"></div>
+    <div id="combo-display"></div>
+    <div class="game-wrapper">
+        <div class="side-panel hold-panel">
+            <h2>HOLD</h2>
+            <canvas id="hold" width="120" height="120"></canvas>
+            <div id="highscore-container">
+                <h2>HIGH SCORES</h2>
+                <ol id="highscore-list"></ol>
+            </div>
+        </div>
+        <div class="main-panel">
+            <h1>CYBER TETRIS</h1>
+            <div id="game-board-container">
+                <canvas id="tetris" width="240" height="480"></canvas>
+                <div id="start-menu" class="overlay">
+                    <h2>CHOOSE DIFFICULTY</h2>
+                    <div class="difficulty-options">
+                        <button class="difficulty-btn" data-level="1">EASY</button>
+                        <button class="difficulty-btn" data-level="5">MEDIUM</button>
+                        <button class="difficulty-btn" data-level="9">HARD</button>
+                    </div>
+                    <button id="start-btn">START GAME</button>
+                </div>
+                <div id="game-over-screen" class="overlay hidden">
+                    <h2>GAME OVER</h2>
+                    <p>FINAL SCORE: <span id="final-score">0</span></p>
+                    <button id="restart-btn">PLAY AGAIN</button>
+                </div>
+                <div id="pause-screen" class="overlay hidden">
+                    <h2>PAUSED</h2>
+                    <p>Press 'P' to resume</p>
+                </div>
+            </div>
+        </div>
+        <div class="side-panel info-panel">
+            <div id="score-container">
+                <h2>SCORE</h2>
+                <div id="score">0</div>
+            </div>
+            <div id="level-container">
+                <h2>LEVEL</h2>
+                <div id="level">1</div>
+            </div>
+            <div id="next-container">
+                <h2>NEXT</h2>
+                <canvas id="next-1" class="next-canvas" width="96" height="96"></canvas>
+                <canvas id="next-2" class="next-canvas" width="96" height="96"></canvas>
+                <canvas id="next-3" class="next-canvas" width="96" height="96"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Files -->
+    <audio id="sound-move" src="move.wav"></audio>
+    <audio id="sound-rotate" src="rotate.wav"></audio>
+    <audio id="sound-lock" src="lock.wav"></audio>
+    <audio id="sound-clear" src="clear.wav"></audio>
+    <audio id="sound-gameover" src="gameover.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
