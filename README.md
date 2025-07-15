@@ -1,5 +1,6 @@
 # Tetris
 俄罗斯方块小游戏
+![](http://datetuchang.dateball.tech/eafe726ac979127722d288f73a504691.png)
 ### 使用说明
 
 下载所有文件并使用浏览器打开`index.html`即可
